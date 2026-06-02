@@ -89,6 +89,14 @@ the full pipeline.
 
 ![history](./history.png)
 
+### OPTIMIZE and VACUUM
+- `OPTIMIZE` — compacts small files for faster reads. On this dataset, 
+  Databricks Serverless had already written optimally — no additional 
+  compaction was required, confirming efficient write behaviour.
+- `VACUUM` — removes unreferenced files older than 7 days. No files 
+  were eligible at time of execution as tables were recently created. 
+  DRY RUN confirmed zero deletions.
+
 
 ## Tech Stack
 - PySpark
